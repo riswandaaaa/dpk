@@ -56,3 +56,47 @@ Route::get('/tambah-arsip-tekstual', function () {
 Route::get('/informasi-arsip-tekstual', function () {
     return view('dashboard.informasi-arsip-tekstual');
 })->name('informasi.arsip.tekstual');
+
+Route::get('/arsip-foto', function () {
+    return view('dashboard.arsip-foto');
+})->name('arsip.foto');
+
+Route::get('/tambah-arsip-foto', function () {
+    return view('dashboard.tambah-arsip-foto');
+})->name('tambah.arsip.foto');
+
+Route::get('/informasi-arsip-foto', function () {
+    return view('dashboard.informasi-arsip-foto');
+})->name('informasi.arsip.foto');
+
+Route::get('/arsip-cd-dvd', function () {
+    return view('dashboard.arsip-cd-dvd');
+})->name('arsip.cd-dvd');
+
+Route::get('/tambah-arsip-cd-dvd', function () {
+    return view('dashboard.tambah-arsip-cd-dvd');
+})->name('tambah.arsip.cd-dvd');
+
+Route::get('/informasi-arsip-cd-dvd', function () {
+    return view('dashboard.informasi-arsip-cd-dvd');
+})->name('informasi.arsip.cd-dvd');
+
+Route::get('/arsip-kartografi', function () {
+    return view('dashboard.arsip-kartografi');
+})->name('arsip.kartografi');
+
+Route::get('/tambah-arsip-kartografi', function () {
+    return view('dashboard.tambah-arsip-kartografi');
+})->name('tambah.arsip.kartografi');
+
+Route::get('/informasi-arsip-kartografi', function () {
+    return view('dashboard.informasi-arsip-kartografi');
+})->name('informasi.arsip.kartografi');
+
+Route::get('/profil', function () {
+    return view('dashboard.profil');
+})->name('profil');
+
+Route::get('/ubah-kata-sandi', function () {
+    return view('dashboard.ubah-kata-sandi');
+})->name('ubah.kata.sandi');

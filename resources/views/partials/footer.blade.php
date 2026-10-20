@@ -12,7 +12,7 @@
                     >
                  </div>
                 <div>
-                    <h3 class="font-bold text-lg">Arsip Jogja</h3>
+                    <h3 class="font-bold text-lg">Arsip Kota Yogyakarta</h3>
                     <p class="text-accent text-[10px]">Dinas Perpustakaan & Kearsipan</p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 @extends('layouts.auth')
-@section('title', 'Login - Arsip Jogja')
+@section('title', 'Login - Arsip Kota Yogyakarta')
 
 @section('auth-content')
     <div class="text-left mb-8 px-2">

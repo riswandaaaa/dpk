@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Arsip Jogja')</title>
+    <title>@yield('title', 'Arsip Kota Yogyakarta')</title>
     
     {{-- Tailwind CSS CDN --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -83,7 +83,7 @@
                     alt="Logo Arsip Jogja" 
                     class="w-16 h-16 mb-3 drop-shadow-md object-contain"
                     >
-                     <h2 class="text-xl font-bold text-gray-900 tracking-wide">Arsip Jogja</h2>
+                     <h2 class="text-xl font-bold text-gray-900 tracking-wide">Arsip Kota Yogyakarta</h2>
                     <p class="text-xs text-gray-500 font-medium uppercase tracking-wider">Dinas Perpustakaan & Kearsipan</p>
                 </div>
 

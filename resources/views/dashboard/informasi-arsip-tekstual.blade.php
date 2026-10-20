@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informasi Arsip Tekstual - Arsip Jogja Dashboard</title>
+    <title>Informasi Arsip Tekstual - Arsip Kota Yogyakarta Dashboard</title>
     
     {{-- Tailwind CSS CDN --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,7 +52,7 @@
         <div class="logo-container p-6 flex items-center gap-4 border-b border-white/10 shrink-0">
             <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-14 h-14 object-contain drop-shadow-md shrink-0">
             <div class="leading-tight sidebar-text">
-                <h1 class="font-bold text-xl tracking-wide text-white">Arsip Jogja</h1>
+                <h1 class="font-bold text-xl tracking-wide text-white">Arsip Kota Yogyakarta</h1>
                 <p class="text-[10px] text-accent font-bold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
             </div>
         </div>
@@ -304,7 +304,7 @@
             <div class="p-6 flex items-center gap-4 border-b border-white/10 shrink-0">
                 <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-14 h-14 object-contain drop-shadow-md shrink-0">
                 <div class="leading-tight">
-                    <h1 class="font-bold text-xl tracking-wide text-white">Arsip Jogja</h1>
+                    <h1 class="font-bold text-xl tracking-wide text-white">Arsip Kota Yogyakarta</h1>
                     <p class="text-[10px] text-accent font-bold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
                 </div>
             </div>

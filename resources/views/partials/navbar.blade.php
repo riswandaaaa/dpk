@@ -16,7 +16,7 @@
             {{-- TEKS BRAND (Font Dinamis) --}}
             <div class="text-white leading-tight min-w-0">
                 {{-- Judul: text-xs (12px) di HP, text-base (16px) di Tablet+ --}}
-                <span class="font-bold block text-xs sm:text-base tracking-wide truncate">Arsip Jogja</span>
+                <span class="font-bold block text-xs sm:text-base tracking-wide truncate">Arsip Kota Yogyakarta</span>
                 
                 {{-- Subjudul: text-[7px] di HP, text-[10px] di Tablet+ --}}
                 <span class="text-accent font-medium block text-[7px] sm:text-[10px] uppercase tracking-wider opacity-90 truncate">

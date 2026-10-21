@@ -58,11 +58,11 @@
 
     {{-- SIDEBAR KIRI --}}
     <aside id="sidebar" class="hidden md:flex flex-col w-72 bg-gradient-to-b from-primary via-blue-400 to-white text-white h-full fixed left-0 top-0 z-30 shadow-xl overflow-hidden">
-        <div class="logo-container p-6 flex items-center gap-4 border-b border-white/10 shrink-0">
-            <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-14 h-14 object-contain drop-shadow-md shrink-0">
-            <div class="leading-tight sidebar-text">
-                <h1 class="font-bold text-xl tracking-wide text-white">Arsip Kota Yogyakarta</h1>
-                <p class="text-[10px] text-accent font-bold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
+        <div class="logo-container p-6 flex items-center gap-3 border-b border-white/10 shrink-0">
+                <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-10 h-10 object-contain drop-shadow-md shrink-0">
+            <div class="flex flex-col leading-tight sidebar-text">
+                <h1 class="font-bold text-base tracking-wide text-white">Arsip Kota Yogyakarta</h1>
+                <p class="text-[9px] text-accent font-semibold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
             </div>
         </div>
 
@@ -120,8 +120,9 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-white/50 shadow-md cursor-pointer shrink-0">
-                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="User" class="w-full h-full object-cover">
+                {{-- LOGO PROFIL PENGGANTI AVATAR DESKTOP --}}
+                <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-white/50 shadow-md cursor-pointer shrink-0 bg-white flex items-center justify-center">
+                    <img src="{{ asset('images/logo-header.png') }}" alt="Foto Profil" class="w-full h-full object-cover">
                 </div>
             </div>
         </header>
@@ -346,11 +347,11 @@
     <div id="mobile-sidebar" class="fixed inset-0 z-40 hidden">
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
         <div class="absolute left-0 top-0 h-full w-72 bg-gradient-to-b from-primary via-blue-400 to-white text-white shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col" id="mobile-sidebar-content">
-            <div class="p-6 flex items-center gap-4 border-b border-white/10 shrink-0">
-                <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-14 h-14 object-contain drop-shadow-md shrink-0">
-                <div class="leading-tight">
-                    <h1 class="font-bold text-xl tracking-wide text-white">Arsip Kota Yogyakarta</h1>
-                    <p class="text-[10px] text-accent font-bold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
+            <div class="p-6 flex items-center gap-3 border-b border-white/10 shrink-0">
+                    <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-10 h-10 object-contain drop-shadow-md shrink-0">
+                <div class="flex flex-col leading-tight">
+                    <h1 class="font-bold text-base tracking-wide text-white">Arsip Kota Yogyakarta</h1>
+                    <p class="text-[9px] text-accent font-semibold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
                 </div>
             </div>
             <nav class="flex-1 overflow-y-auto hide-scrollbar py-6 px-4 space-y-2">

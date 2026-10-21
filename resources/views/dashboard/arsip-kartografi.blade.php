@@ -15,6 +15,7 @@
                         primary: '#0069D4',
                         accent: '#C8E900',
                         darkblue: '#004B87',
+                        btnLime: '#B9FD4E', // Warna baru untuk tombol unduh
                         statusGood: '#16A34A', // Hijau untuk Bagus
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] }
@@ -55,11 +56,11 @@
 
     {{-- SIDEBAR KIRI --}}
     <aside id="sidebar" class="hidden md:flex flex-col w-72 bg-gradient-to-b from-primary via-blue-400 to-white text-white h-full fixed left-0 top-0 z-30 shadow-xl overflow-hidden">
-        <div class="logo-container p-6 flex items-center gap-4 border-b border-white/10 shrink-0">
-            <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-14 h-14 object-contain drop-shadow-md shrink-0">
-            <div class="leading-tight sidebar-text">
-                <h1 class="font-bold text-xl tracking-wide text-white">Arsip Kota Yogyakarta</h1>
-                <p class="text-[10px] text-accent font-bold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
+        <div class="logo-container p-6 flex items-center gap-3 border-b border-white/10 shrink-0">
+                <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-10 h-10 object-contain drop-shadow-md shrink-0">
+            <div class="flex flex-col leading-tight sidebar-text">
+                <h1 class="font-bold text-base tracking-wide text-white">Arsip Kota Yogyakarta</h1>
+                <p class="text-[9px] text-accent font-semibold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
             </div>
         </div>
 
@@ -117,8 +118,9 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-white/50 shadow-md cursor-pointer shrink-0">
-                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="User" class="w-full h-full object-cover">
+                {{-- LOGO PROFIL PENGGANTI AVATAR DESKTOP --}}
+                <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-white/50 shadow-md cursor-pointer shrink-0 bg-white flex items-center justify-center">
+                    <img src="{{ asset('images/logo-header.png') }}" alt="Foto Profil" class="w-full h-full object-cover">
                 </div>
             </div>
         </header>
@@ -126,11 +128,14 @@
         {{-- ISI HALAMAN ARSIP KARTOGRAFI --}}
         <div class="p-4 lg:p-8 max-w-7xl mx-auto fade-in">
             
-            {{-- TOOLBAR ATAS (RESPONSIF) --}}
+            {{-- TOOLBAR ATAS (RESPONSIF - DENGAN TOMBOL UNDUH & TANPA TITIK TIGA) --}}
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
                 
-                {{-- Spacer Kosong di Kiri untuk Desktop --}}
-                <div class="hidden lg:block w-auto"></div>
+                {{-- Tombol Unduh (Kiri Atas) --}}
+                <button class="w-auto bg-btnLime text-gray-900 font-bold px-3 py-2 lg:px-5 lg:py-2.5 rounded-lg hover:brightness-95 transition-colors shadow-sm flex items-center justify-center gap-2 text-xs lg:text-sm">
+                    <span>Unduh</span>
+                    <svg class="w-3.5 h-3.5 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </button>
 
                 {{-- Group Search & Actions --}}
                 <div class="w-full lg:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-1 lg:flex-none">
@@ -142,7 +147,7 @@
                         <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     </div>
 
-                    {{-- Action Buttons Group --}}
+                    {{-- Action Buttons Group (HANYA FILTER & TAMBAH) --}}
                     <div class="flex items-center gap-2">
                         <button class="p-2.5 bg-white border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors shadow-sm" title="Filter">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
@@ -156,10 +161,6 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                             </svg>
                         </a>
-
-                        <button class="p-2.5 bg-white border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors shadow-sm" title="Opsi Lainnya">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -297,11 +298,11 @@
     <div id="mobile-sidebar" class="fixed inset-0 z-40 hidden">
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
         <div class="absolute left-0 top-0 h-full w-72 bg-gradient-to-b from-primary via-blue-400 to-white text-white shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col" id="mobile-sidebar-content">
-            <div class="p-6 flex items-center gap-4 border-b border-white/10 shrink-0">
-                <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-14 h-14 object-contain drop-shadow-md shrink-0">
-                <div class="leading-tight">
-                    <h1 class="font-bold text-xl tracking-wide text-white">Arsip Kota Yogyakarta</h1>
-                    <p class="text-[10px] text-accent font-bold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
+            <div class="p-6 flex items-center gap-3 border-b border-white/10 shrink-0">
+                    <img src="{{ asset('images/logo-header.png') }}" onerror="this.style.display='none'" alt="Logo" class="w-10 h-10 object-contain drop-shadow-md shrink-0">
+                <div class="flex flex-col leading-tight">
+                    <h1 class="font-bold text-base tracking-wide text-white">Arsip Kota Yogyakarta</h1>
+                    <p class="text-[9px] text-accent font-semibold uppercase tracking-wider mt-0.5">Dinas Perpustakaan & Kearsipan</p>
                 </div>
             </div>
             <nav class="flex-1 overflow-y-auto hide-scrollbar py-6 px-4 space-y-2">
